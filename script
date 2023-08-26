@@ -1,0 +1,3 @@
+remote(false)
+cd(/home/wbui/Quest-VSP)
+panel(json) read_database(*) read_measurement(./QuestpostInputData/VSPAero.bundle.json) read_measurementconfig(./configjsonmeasurement)

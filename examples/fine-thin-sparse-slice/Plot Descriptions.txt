@@ -1,0 +1,7 @@
+Slice data on a thin wing:
+
+PDF across whole wing
+PDF on a single point
+Realizations across each mesh level
+Mean error + STD error
+Statistics vs Realization Error

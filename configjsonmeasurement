@@ -1,0 +1,7 @@
+VSPAero	true
+CL	false
+ParPanelNoError	false	0	0	x	false	false	false	true	false	false	false	1-σ	false	false	1.0	false
+CDTot	false
+ParPanelNoError	false	0	0	x	false	false	false	false	false	false	false	1-σ	false	false	1.0	false
+CMy	false
+ParPanelNoError	false	0	0	x	false	false	false	false	false	false	false	1-σ	false	false	1.0	false

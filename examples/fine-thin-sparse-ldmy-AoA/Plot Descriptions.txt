@@ -1,0 +1,5 @@
+CD/CL/CMy across a range of AoA Values:
+
+PDFS
+Mean Error + STD Error
+Statistics vs Realization Error (Realization is the "Cloned" plot)
