@@ -593,6 +593,31 @@ def aeroquest(meshPathArr, num_levels):
     time_file.write(f"Execution Time: {start - end} s")
     runPost(questScriptPath, questLauncherPath)
 
+def aeroquest_mg(geomDataPath, polarPathArr):
+  """Runs Aeroquest for non-slice data with mglevel
+
+    Args:
+        geomDataPath (str): Contains path to fine mesh
+        polarPathArr (str list): List of strings containing paths to polar files
+
+    Returns:
+        None, Runs Aeroquest
+    """
+    vspCases = parseDatabase(databasePath, outputFile)
+    print(len(vspCases))
+
+    deleteJsonFiles()
+    for i, meshPath in enumerate(polarDataArr):
+        deleteVspAeroFiles(geomDataPath)
+        writeVspAeroFiles(vspCases[i], geomDataPath)
+        runSolver(vspAeroPath, i + 1, geomDataPath)
+        
+        writeJsonFiles(parseVSPAeroData(polarPathArr[i]), vspCases[i])
+
+    bundleJson()
+    writePostFiles(questScriptPath, questScriptMeasurePath, mainDir, outputFile)
+    runPost(questScriptPath, questLauncherPath)
+  
 def aeroquestSlice(meshPathArr, num_levels):
     """Runs Aeroquest for slice data
 
@@ -647,6 +672,7 @@ if len(sys.argv) > 1:
             print("-d: Delete .VSPAero Files")
             print("-s: Runs VSPAero Solver")
             print("-ws: Runs full Quest/VSP Wrapper, to run for slice data add -slice flag")
+            print("-wsmg: Runs full Quest/VSP Wrapper with mglevel")
         case "-d":
             deleteVspAeroFiles(geomDataPath)
         case "-w":
@@ -655,6 +681,7 @@ if len(sys.argv) > 1:
 
         case "-s":
             runSolver(vspAeroPath, geomDataPath)
+        
         case "-ws":
             if len(sys.argv) < 3:
                 print("Error: Missing Mesh Number Arg")
@@ -679,7 +706,11 @@ if len(sys.argv) > 1:
                 if sys.argv[3] == "-slice":
                     print("Outputting Slice Data")
                     aeroquestSlice(geomDataArr, int(sys.argv[2]))
-
+                  
+        case "-wsmg":
+                  polarDataArr = [polarFilePath, polarFilePathMed, polarFilePathCoarse]
+                  aeroquest_mg(geomDataPath, polarDataArr)
+          
         case "-test":
             print("Nothing to see here")
 
