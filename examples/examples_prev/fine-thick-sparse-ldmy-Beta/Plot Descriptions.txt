@@ -1,5 +1,0 @@
-CD/CL/CMy across a range of Beta Values:
-
-PDFS
-Mean Error + STD Error
-Realization vs Statistics Error (Realization is the "Cloned" Plot)
