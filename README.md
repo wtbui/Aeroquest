@@ -155,6 +155,9 @@ Test cases labeled "Coarse" are debug meshes
 * Can not handle slice data on geometries with multiple curves
 
 ## Figures
+
+(Found in examples/examples_new)
+
 ### fine-thick-dense-slice
 
 The data for all plots are derived from computations conducted using three different mesh refinement levels, each comprising <b>69</b> VSPAERO simulations per level. The input sources of uncertainty for these simulations are Angle of Attack (AoA), Side Slip Angle (Beta), and Mach number, all following a normal distribution pattern. Every plot within the dataset presents statistical information related to the Coefficient of Pressure (Cp) at a specific location along the wing's span, precisely at the y-coordinate of 2.
