@@ -1,6 +1,6 @@
 # Aeroquest <img width="100" alt="Capture" src="https://github.com/arocketguy/VSPAERO-QUEST/assets/25555091/141b9135-41f0-47ad-8de1-eb766afe43ea">
 
-The typical aerodynamic analysis process involves calculating the lift, drag, and moments over the flight regime and passing this data to the vehicle analysis team. Our goal for this project was to enhance the reliability of aerospace CFD simulations and optimize early-stage aircraft design. We worked with two softwares: VSPAERO, a fast aerodynamic solver, and QUEST, uncertainty quantification code. Our work automates the preprocessing of aircraft uncertainty source data, computes aerodynamic forces on models, and generates an aerodynamic database of uncertainty quantification and error estimation for analysis, that can then be propagated down stream in the vehicle design process. 
+The typical aerodynamic analysis process involves calculating the lift, drag, and moments over the flight regime and passing this data to the vehicle analysis team. Our goal for this project was to enhance the reliability of aerospace CFD simulations and optimize early-stage aircraft design. We worked with two softwares: VSPAERO, a fast aerodynamic solver, and QUEST, uncertainty quantification code. Our work automates the preprocessing of aircraft uncertainty source data, computes aerodynamic forces on models, and generates an aerodynamic database of uncertainty quantification and error estimation for analysis, that can then be propagated downstream in the vehicle design process. 
 
 <b>Aeroquest handles:</b>
   * File IO parsing between VSPAERO/QUEST​
@@ -11,7 +11,7 @@ The typical aerodynamic analysis process involves calculating the lift, drag, an
   * Fine meshes​
   * Panel method
   * Adjoint solver
-    * Instead of solving on three different meshs to get the realization error, our adjoint solver will calculate the error that can be fed into QUEST
+    * Instead of solving on three different meshes to get the realization error, our adjoint solver will calculate the error that can be fed into QUEST
 
  ![image](https://github.com/arocketguy/VSPAERO-QUEST/assets/25555091/93e4e7ba-f5bb-4996-ab0d-8b8d60012b1e)
 
@@ -77,10 +77,8 @@ Fundamental expectation error decomposition:
 
 Depending on which sources of error bias are dominant, additional computational resources can then be allocated to achieve SEBB:
 * Reduce expected realization error bias by solving CFD problems more accuractely (e.g., finer meshes),
-* Reduce expectation approximation error by calculating statistics more ac-
-curately (e.g., more samples or quadrature point evaluations),
-* Reduce the expected model error bias by improving the model (e.g., ML
-model augmentation, model replacement).
+* Reduce expectation approximation error by calculating statistics more accurately (e.g., more samples or quadrature point evaluations),
+* Reduce the expected model error bias by improving the model (e.g., ML model augmentation, model replacement).
 
 #### Error Estimates for Moment Statistics)
 
@@ -112,14 +110,14 @@ Two forms of externally provided realization error and model error can be accomm
 
 ![image](https://github.com/arocketguy/VSPAERO-QUEST/assets/25555091/0ceb3e58-55f6-45f2-934d-5961fe9082a0)
 
-## Before running:
+## Before running
 Use QUESTPrep to generate a database file and OpenVSP to generate geometry(s)
 
 If running on slice data, write a .cuts file to specify cut locations along geometry
 
 <b>NOTE</b>: File paths can only currently be specified within the source code
 
-## Running:
+## Running
 In terminal use command:
 
 ```
@@ -144,7 +142,7 @@ python3 Aeroquest.py <flags> <mesh number (1-3)> <-slice (IF USING SLICE)>
 
 -test: Runs test code block
 
-### Testcases:
+### Test cases:
 Included in VSPAERO-QUEST/TestCase are 4 test cases (containing 3 levels of meshes). 
 Test cases labeled "Coarse" are debug meshes
 
