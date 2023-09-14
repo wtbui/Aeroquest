@@ -1,4 +1,4 @@
-# Aeroquest
+# Aeroquest <img width="100" alt="Capture" src="https://github.com/arocketguy/VSPAERO-QUEST/assets/25555091/141b9135-41f0-47ad-8de1-eb766afe43ea">
 
 The typical aerodynamic analysis process involves calculating the lift, drag, and moments over the flight regime and passing this data to the vehicle analysis team. Our goal for this project was to enhance the reliability of aerospace CFD simulations and optimize early-stage aircraft design. We worked with two softwares: VSPAERO, a fast aerodynamic solver, and QUEST, uncertainty quantification code. Our work automates the preprocessing of aircraft uncertainty source data, computes aerodynamic forces on models, and generates an aerodynamic database of uncertainty quantification and error estimation for analysis, that can then be propagated down stream in the vehicle design process. 
 
@@ -12,6 +12,8 @@ The typical aerodynamic analysis process involves calculating the lift, drag, an
   * Panel method
   * Adjoint solver
     * Instead of solving on three different meshs to get the realization error, our adjoint solver will calculate the error that can be fed into QUEST
+
+ ![image](https://github.com/arocketguy/VSPAERO-QUEST/assets/25555091/93e4e7ba-f5bb-4996-ab0d-8b8d60012b1e)
 
 <b>Note</b>: This repo will only contain the work we did with QUEST.
 
@@ -152,11 +154,75 @@ Test cases labeled "Coarse" are debug meshes
 * When slicing thick geometries, upper edge must have negative z values
 * Can not handle slice data on geometries with multiple curves
 
-## Example results
-![image](https://github.com/arocketguy/VSPAERO-QUEST/assets/25555091/d99179f9-6614-4565-9c81-4564c216aa19)
-![image](https://github.com/arocketguy/VSPAERO-QUEST/assets/25555091/1c2150ac-8d23-467d-bc92-4d90815105f8)
-![image](https://github.com/arocketguy/VSPAERO-QUEST/assets/25555091/b25ad60c-39b7-4018-acbc-f634db53685e)
-![image](https://github.com/arocketguy/VSPAERO-QUEST/assets/25555091/59286730-6020-4460-b6eb-cfb5525797f5)
+## Figures
+### fine-thick-dense-slice
+
+The data for all plots are derived from computations conducted using three different mesh refinement levels, each comprising <b>69</b> VSPAERO simulations per level. The input sources of uncertainty for these simulations are Angle of Attack (AoA), Side Slip Angle (Beta), and Mach number, all following a normal distribution pattern. Every plot within the dataset presents statistical information related to the Coefficient of Pressure (Cp) at a specific location along the wing's span, precisely at the y-coordinate of 2.
+
+
+![image](https://github.com/arocketguy/VSPAERO-QUEST/assets/25555091/f3161206-48a9-4041-8d26-81e78787f6fd)
+
+This plot illustrates the mean and standard deviation (σ) of the surface pressure coefficient (Cp). The figure displays data for both the lower surface (represented by black curves) and the upper surface (represented by blue curves) along the wing's X-location.
+
+
+![image](https://github.com/arocketguy/VSPAERO-QUEST/assets/25555091/46d6382a-fff0-4445-aa8e-e11e5a46c85f)
+
+The plot depicts a normalized probability density function (PDF) in relation to the X-location on the wing's surface. The colors on the plot correspond to different ranges of the PDF, ranging from 0 to 1.
+
+
+![image](https://github.com/arocketguy/VSPAERO-QUEST/assets/25555091/f77a9aeb-e186-445e-a6db-38b6b251427e)
+
+This plot is based on data from the above PDF plot and showcases the PDF distribution at X = 1.6756. It includes pairs of quantiles that delimit 10% of the total probability.
+
+
+![image](https://github.com/arocketguy/VSPAERO-QUEST/assets/25555091/7e81442d-9a8f-43d1-b29e-d0a75dc58efa)
+
+This plot presents surface pressure coefficient data obtained from VSPAERO calculations on three mesh levels. The color code used is as follows: red for fine mesh, green for medium mesh, and blue for coarse mesh. This data is crucial in estimating errors in QUESTPost.
+
+
+![image](https://github.com/arocketguy/VSPAERO-QUEST/assets/25555091/1c95468d-d7a9-4b99-8219-a87d62f7e72b)
+
+This plot provides error equations, both real and statistical, along with an equation. It breaks down the mean Cp error bias into components resulting from VSPAERO realization errors (black curve) and errors introduced by QUESTPost during the calculation of the mean Cp statistic. The QUEST error bias is significantly smaller than the VSPAERO error bias across most data points, except at X = 2.8, where they are approximately balanced.
+
+
+![image](https://github.com/arocketguy/VSPAERO-QUEST/assets/25555091/22873f2c-4d01-4bdf-8539-3708aa9058bf)
+
+This plot ranks the input sources of uncertainty as fractions of unity based on the variation demonstrated in the moments.png plot. Side slip error bias contribution is relatively insignificant across all data points, while the angle of attack (AoA) error bias contribution dominates near the wing's leading edge. The contribution of Mach number error bias is prominent in the downstream portion of the wing at X = 1.8.
+
+
+### fine-thick-sparse-slice
+
+The data for all plots are derived from computations conducted using three different mesh refinement levels, each comprising <b>729</b> VSPAERO simulations per level. The input sources of uncertainty for these simulations are Angle of Attack (AoA), Side Slip Angle (Beta), and Mach number, all following a normal distribution pattern. Every plot within the dataset presents statistical information related to the Coefficient of Pressure (Cp) at a specific location along the wing's span, precisely at the y-coordinate of 2.
+
+
+![image](https://github.com/arocketguy/VSPAERO-QUEST/assets/25555091/73dd968a-8239-4bf6-a5a7-74a9ff3a38e3)
+
+This plot illustrates the mean and standard deviation (σ) of the surface pressure coefficient (Cp). The figure displays data for both the lower surface (represented by black curves) and the upper surface (represented by blue curves) along the wing's X-location.
+
+
+![image](https://github.com/arocketguy/VSPAERO-QUEST/assets/25555091/8394da88-751c-4928-a07e-63f5b47f6271)
+
+The plot depicts a normalized probability density function (PDF) in relation to the X-location on the wing's surface. The colors on the plot correspond to different ranges of the PDF, ranging from 0 to 1.
+
+
+![image](https://github.com/arocketguy/VSPAERO-QUEST/assets/25555091/0e370a58-7c85-4456-ac47-adb7d0c52816)
+
+This plot is based on data from the above PDF plot and showcases the PDF distribution at X = 1.6756. It includes pairs of quantiles that delimit 10% of the total probability.
+
+
+![image](https://github.com/arocketguy/VSPAERO-QUEST/assets/25555091/3e1ee353-b447-4a02-afbd-467c7d0e50eb)
+
+This plot presents surface pressure coefficient data obtained from VSPAERO calculations on three mesh levels. The color code used is as follows: red for fine mesh, green for medium mesh, and blue for coarse mesh. This data is crucial in estimating errors in QUESTPost.
+
+
+![image](https://github.com/arocketguy/VSPAERO-QUEST/assets/25555091/319fc5cb-3d6f-4048-93ad-a7caa1f046b1)
+
+This plot provides error equations, both real and statistical, along with an equation. It breaks down the mean Cp error bias into components resulting from VSPAERO realization errors (black curve) and errors introduced by QUESTPost during the calculation of the mean Cp statistic. The QUEST error bias is significantly smaller than the VSPAERO error bias across most data points, except at X = 2.8, where they are approximately balanced.
+,
+
+![image](https://github.com/arocketguy/VSPAERO-QUEST/assets/25555091/30f54f35-4ba8-4c19-aea7-aa79b83ad632)
+
+This plot ranks the input sources of uncertainty as fractions of unity based on the variation demonstrated in the moments.png plot. Side slip error bias contribution is relatively insignificant across all data points, while the angle of attack (AoA) error bias contribution dominates near the wing's leading edge. The contribution of Mach number error bias is prominent in the downstream portion of the wing at X = 1.8.
 
 
 #
