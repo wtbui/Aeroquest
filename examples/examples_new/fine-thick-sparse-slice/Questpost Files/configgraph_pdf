@@ -1,0 +1,196 @@
+#title_string# null
+#title_xrpos# 0.0
+#title_yrpos# 0.0
+#title_font# System NORMAL REGULAR 30.0
+#title_color# 0 0 0
+#xAxis_label# x$location
+#xAxis_label_xrpos# 0.0
+#xAxis_label_yrpos# 0.0
+#xAxis_label_font# System NORMAL REGULAR 22.0
+#xAxis_label_color# 0 0 0
+#xAxis_tick_active# true
+#xAxis_tick_font# System NORMAL REGULAR 18.0
+#xAxis_tick_color# 0 0 0
+#xAxis_init# false
+#xAxis_auto# true
+#xgrid_active# true
+#xlog_active# false
+#xinvert_active# false
+#xexpnotation_active# false
+#xAxis_min# 0.0
+#xAxis_max# 1.0
+#xAxis_inc# 0.1
+#yAxis_label# PDF(Cp)
+#yAxis_label_xrpos# 0.0
+#yAxis_label_yrpos# 0.0
+#yAxis_label_font# System NORMAL REGULAR 22.0
+#yAxis_label_color# 0 0 0
+#yAxis_tick_active# true
+#yAxis_tick_font# System NORMAL REGULAR 18.0
+#yAxis_tick_color# 0 0 0
+#yAxis_init# false
+#yAxis_auto# true
+#ygrid_active# true
+#ylog_active# false
+#yinvert_active# true
+#yexpnotation_active# false
+#yAxis_min# 1.0E-10
+#yAxis_max# 1.0
+#yAxis_inc# 0.1
+#exchange_axis# false
+#legend_active# true
+#legend_font# System NORMAL REGULAR 12.0
+#legend_fontcolor# 0 0 0
+#legend_xpos# 20.0 0.01
+#legend_ypos# 20.0 0.95
+#colorbar_active# true
+#colorbar_title# Normalized$PDF$values
+#colorbar_type# multi
+#colorbar_font# System NORMAL REGULAR 18.0
+#colorbar_fontcolor# 0 0 0
+#colorbar_title_font# System NORMAL REGULAR 18.0
+#colorbar_title_fontcolor# 0 0 0
+#colorbar_fillcolor# 255 0 0
+#colorbar_xpos# 20.0 0.01 0.0
+#colorbar_ypos# 20.0 0.01 0.0
+#colorbar_min# 0.0
+#colorbar_max# 1.0
+#colorbar_scaleheight# 1.0
+#orderLegend# 0 1 2 3
+#series_ext# 0
+#series_ext::active# true
+#series_ext::stroke_active# false
+#series_ext::stroke_color# 0 255 0
+#series_ext::stroke_width# 2
+#series_ext::stroke_dash_active# false
+#series_ext::stroke_dash_type# dash5
+#series_ext::linepath_active# false
+#series_ext::linepath_color# 0 0 0
+#series_ext::linepath_width# 1
+#series_ext::linepath_dash_active# false
+#series_ext::linepath_dash_type# dash5
+#series_ext::symbol_outline_active# false
+#series_ext::symbol_fill_active# false
+#series_ext::symbol_outline_color# 0 255 0
+#series_ext::symbol_fill_color# 255 255 255
+#series_ext::symbol_shape# downtriangle
+#series_ext::symbol_scale# 1.2
+#series_ext::shaded_active# false
+#series_ext::shaded_linear_gradient_active# false
+#series_ext::shaded_mono_active# false
+#series_ext::shaded_mono_fill_color# 100 100 100
+#series_ext::fill_active# false
+#series_ext::fill_color# 100 20 20
+#series_ext::blend_mode# SRC_OVER
+#series_ext::legend_active# false
+#series_ext::legend_string# unused
+#series_ext::legend_scale# 1.0
+#series_ext::legend_fontcolor# 0 0 0
+#series_ext::legend_font# System NORMAL REGULAR 20.0
+#series_ext# 1
+#series_ext::active# true
+#series_ext::stroke_active# false
+#series_ext::stroke_color# 0 255 0
+#series_ext::stroke_width# 2
+#series_ext::stroke_dash_active# false
+#series_ext::stroke_dash_type# dash5
+#series_ext::linepath_active# false
+#series_ext::linepath_color# 0 0 0
+#series_ext::linepath_width# 1
+#series_ext::linepath_dash_active# false
+#series_ext::linepath_dash_type# dash5
+#series_ext::symbol_outline_active# false
+#series_ext::symbol_fill_active# false
+#series_ext::symbol_outline_color# 0 255 0
+#series_ext::symbol_fill_color# 255 255 255
+#series_ext::symbol_shape# downtriangle
+#series_ext::symbol_scale# 1.2
+#series_ext::shaded_active# true
+#series_ext::shaded_linear_gradient_active# true
+#series_ext::shaded_mono_active# false
+#series_ext::shaded_mono_fill_color# 100 100 100
+#series_ext::fill_active# false
+#series_ext::fill_color# 100 20 20
+#series_ext::blend_mode# SRC_OVER
+#series_ext::legend_active# true
+#series_ext::legend_string# normalized$PDF(Cp)
+#series_ext::legend_scale# 1.0
+#series_ext::legend_fontcolor# 0 0 0
+#series_ext::legend_font# System NORMAL REGULAR 20.0
+#series_ext# 2
+#series_ext::active# true
+#series_ext::stroke_active# false
+#series_ext::stroke_color# 0 255 0
+#series_ext::stroke_width# 2
+#series_ext::stroke_dash_active# false
+#series_ext::stroke_dash_type# dash5
+#series_ext::linepath_active# false
+#series_ext::linepath_color# 0 0 0
+#series_ext::linepath_width# 1
+#series_ext::linepath_dash_active# false
+#series_ext::linepath_dash_type# dash5
+#series_ext::symbol_outline_active# false
+#series_ext::symbol_fill_active# false
+#series_ext::symbol_outline_color# 0 255 0
+#series_ext::symbol_fill_color# 255 255 255
+#series_ext::symbol_shape# downtriangle
+#series_ext::symbol_scale# 1.2
+#series_ext::shaded_active# false
+#series_ext::shaded_linear_gradient_active# false
+#series_ext::shaded_mono_active# false
+#series_ext::shaded_mono_fill_color# 100 100 100
+#series_ext::fill_active# false
+#series_ext::fill_color# 100 20 20
+#series_ext::blend_mode# SRC_OVER
+#series_ext::legend_active# false
+#series_ext::legend_string# unused
+#series_ext::legend_scale# 1.0
+#series_ext::legend_fontcolor# 0 0 0
+#series_ext::legend_font# System NORMAL REGULAR 20.0
+#series_ext# 3
+#series_ext::active# true
+#series_ext::stroke_active# false
+#series_ext::stroke_color# 0 255 0
+#series_ext::stroke_width# 2
+#series_ext::stroke_dash_active# false
+#series_ext::stroke_dash_type# dash5
+#series_ext::linepath_active# false
+#series_ext::linepath_color# 0 0 0
+#series_ext::linepath_width# 1
+#series_ext::linepath_dash_active# false
+#series_ext::linepath_dash_type# dash5
+#series_ext::symbol_outline_active# false
+#series_ext::symbol_fill_active# false
+#series_ext::symbol_outline_color# 0 255 0
+#series_ext::symbol_fill_color# 255 255 255
+#series_ext::symbol_shape# downtriangle
+#series_ext::symbol_scale# 1.2
+#series_ext::shaded_active# true
+#series_ext::shaded_linear_gradient_active# true
+#series_ext::shaded_mono_active# false
+#series_ext::shaded_mono_fill_color# 100 100 100
+#series_ext::fill_active# false
+#series_ext::fill_color# 100 20 20
+#series_ext::blend_mode# SRC_OVER
+#series_ext::legend_active# false
+#series_ext::legend_string# dCp(clone),$normalized$PDF
+#series_ext::legend_scale# 1.0
+#series_ext::legend_fontcolor# 0 0 0
+#series_ext::legend_font# System NORMAL REGULAR 20.0
+#contouring_cpars::num_contours# 1
+#contouring_cpars::value_min# 0.0
+#contouring_cpars::value_max# 1.0
+#contouring_cpars::use_color_mono# false
+#contouring_cpars::color_mono# 0 0 0
+#contouring_cpars::stroke_active# true
+#contouring_cpars::stroke_width# 1.0
+#contouring_cpars::stroke_dash_active# false
+#contouring_cpars::stroke_dash_type# false
+#contouring_cpars::stroke_outline_active# true
+#contouring_cpars::stroke_outline_width# 1.0
+#contouring_cpars::color_outline# 0 0 0
+#linepath_pars::color# 0 0 0
+#linepath_pars::stroke_active# false
+#linepath_pars::stroke_width# 1.0
+#linepath_pars::stroke_dash_active# false
+#linepath_pars::stroke_dash_type# false
